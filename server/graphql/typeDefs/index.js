@@ -54,6 +54,14 @@ const typeDefs = gql`
     ): Member
 
     deleteMember(username: String!): Boolean
+
+  updateMember(
+    username: String!
+    email: String
+    api_key: String
+    approvedAppids: [String]
+  ): Member
+
   }
 `;
 
