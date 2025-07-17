@@ -1,13 +1,4 @@
-const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://localhost:27017/aiproddb", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log("✅ Connected to MongoDB");
-}).catch((err) => {
-  console.error("❌ MongoDB connection error:", err);
-});
+const mongoose = require("./index");
 
 // Define event property schema
 const eventParamSchema = new mongoose.Schema({
