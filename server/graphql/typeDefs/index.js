@@ -45,6 +45,16 @@ const typeDefs = gql`
     member(username: String!): Member
     events: [EventSegments]
   }
+
+  type Mutation {
+    createMember(
+      username: String!
+      email: String!
+      api_key: String
+    ): Member
+
+    deleteMember(username: String!): Boolean
+  }
 `;
 
 module.exports = typeDefs;
